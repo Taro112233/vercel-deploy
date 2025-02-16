@@ -14,7 +14,7 @@ function App() {
 
   const handleLogin = (email, password) => {
     if (email === 'thanatouchtaro@gmail.com' && password === '1234'
-      || email === 'test@gmail.com' && password === '1234'
+      || email === 'test@gmail.com' && password === '12345'
     ) {
       sessionStorage.setItem('isLoggedIn', 'true');
       setIsLoggedIn(true);
