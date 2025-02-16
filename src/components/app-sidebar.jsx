@@ -1,5 +1,7 @@
 import * as React from "react"
 import { GalleryVerticalEnd } from "lucide-react"
+import { useNavigate } from 'react-router-dom';
+import Login from "@/app/login/page"
 
 import {
   Sidebar,
@@ -37,8 +39,11 @@ const data = {
           title: "Log out",
           url: "#",
           onClick: () => {
-            sessionStorage.clear();
-            window.location.href = "/login";
+            const navigate = useNavigate();
+            setTimeout(() => {
+              sessionStorage.clear();
+              navigate('/login');
+            }, 1000);
           },
         },
       ],
